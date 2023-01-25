@@ -42,9 +42,8 @@ function filterOutLowValues(rolls, lowest) {
  * are the number of times that roll appears in the `rolls` array.
  */
 function getRollCounts(rolls) {
-  var count = new Set([...rolls])
   let obj = {}
-  for (var i of count) {
+  for (var i of new Set([...rolls])) {
     var innercount = 0
     for (var j of rolls) if (i==j) innercount ++
     obj[i]=innercount
