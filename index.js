@@ -43,7 +43,7 @@ function filterOutLowValues(rolls, lowest) {
  */
 function getRollCounts(rolls) {
   let obj = {}
-  for (var i of new Set([...rolls])) {
+  for (var i of new Set(rolls)) {
     var innercount = 0
     for (var j of rolls) if (i==j) innercount ++
     obj[i]=innercount
